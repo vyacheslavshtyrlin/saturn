@@ -17,7 +17,6 @@ function Form({ time, setOpen, open, closeCalendar, handleSubmit }) {
     email: true,
     name: true,
   });
-  const [check, setCheck] = useState(false);
 
   const tel = regexMobile.test(state.tel);
   const email = regexEmail.test(state.email);
@@ -35,14 +34,12 @@ function Form({ time, setOpen, open, closeCalendar, handleSubmit }) {
   }, [time]);
 
   useEffect(() => {
-    if (check) {
-      setValidation({
-        tel: tel,
-        email: email,
-        name: name,
-        all: tel && email && name,
-      });
-    }
+    setValidation({
+      tel: tel,
+      email: email,
+      name: name,
+      all: tel && email && name,
+    });
   }, [state]);
 
   console.log(state);
@@ -66,13 +63,6 @@ function Form({ time, setOpen, open, closeCalendar, handleSubmit }) {
 
   function sendForm(e) {
     e.preventDefault();
-    setCheck(true);
-    setValidation({
-      tel: tel,
-      email: email,
-      name: name,
-      all: tel && email && name,
-    });
     if (validation.all) {
       handleSubmit(state);
       setConfirm(true);
@@ -95,7 +85,6 @@ function Form({ time, setOpen, open, closeCalendar, handleSubmit }) {
       email: true,
       name: true,
     });
-    setCheck(false);
   }
 
   return (
