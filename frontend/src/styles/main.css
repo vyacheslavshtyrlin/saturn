@@ -1,0 +1,136 @@
+.main__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100%;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 832px) {
+  .main__title {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__title {
+    font-size: 40px;
+    width: 300px;
+  }
+}
+
+.main_caption {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  width: 570px;
+}
+
+@media screen and (max-width: 832px) {
+  .main_caption {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main_caption {
+    font-size: 14px;
+    margin-bottom: 125px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__logo {
+    width: 81px;
+  }
+}
+
+.main__section {
+  background-image: url(../images/background.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto 2fr;
+  align-items: center;
+  padding: 55px 0 0 180px;
+  height: 900px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.main__calendar {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 900px;
+  transition: all 0.5s ease;
+}
+
+.main__calendar_close {
+  z-index: 2;
+  position: fixed;
+  right: -620px;
+  top: 0;
+  width: 620px;
+  background: white;
+  height: 900px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1152px) {
+  .main__calendar {
+    height: 640px;
+    width: 492px;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .main__calendar {
+    width: 100%;
+    height: 1024px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__calendar {
+    height: 568px;
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  .main__section {
+    padding: 55px 20px 0;
+    height: 640px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .main__section {
+    padding: 20px 30px 0;
+    height: 1024px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__section {
+    padding: 10px 10px 20px 10px;
+    height: 568px;
+    width: 100%;
+  }
+}

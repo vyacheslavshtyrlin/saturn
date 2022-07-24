@@ -1,0 +1,166 @@
+.calendar {
+  color: #333333;
+  box-sizing: border-box;
+  width: 620px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1152px) {
+  .calendar {
+    width: 100%;
+  }
+}
+
+.caption__container {
+  display: flex;
+  align-items: center;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 50px 40px;
+}
+
+@media screen and (max-width: 1152px) {
+  .calendar__header {
+    margin: 40px 20px 50px;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .calendar__header {
+    margin: 50px 20px 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar__header {
+    margin: 30px 10px 30px;
+  }
+}
+
+.calendar__caption {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+}
+
+@media screen and (max-width: 480px) {
+  .calendar__caption {
+    font-size: 16px;
+  }
+}
+
+.date__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.date {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+}
+
+@media screen and (max-width: 480px) {
+  .date {
+    font-size: 16px;
+  }
+}
+
+.calendar__table {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 4px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1152px) {
+  .calendar__table {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .calendar__table {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar__table {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.calendar__cell {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  cursor: pointer;
+  height: 50px;
+  transition: all 0.3s ease;
+  /* identical to box height, or 29px */
+}
+
+.calendar__cell_none {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .calendar__cell {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.calendar__cell_active {
+  background: #e9e9e9;
+}
+
+.calendar__cell_nopoint {
+  pointer-events: none;
+}
+
+.calendar__cell:hover {
+  background: #e9e9e9;
+}
+
+.calendar__table:nth-child(even) {
+  background: #fafafa;
+}
+
+.weekday__cell {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  height: 50px;
+  /* identical to box height, or 29px */
+}
+
+@media screen and (max-width: 480px) {
+  .weekday__cell {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.calendar_none {
+  display: none;
+}
