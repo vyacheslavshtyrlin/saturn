@@ -10,7 +10,7 @@ const dataSchema = new mongoose.Schema({
   tel: {
     type: String,
     minlength: [11, 'Должно быть минимум 2 символа'],
-    maxlength: [30, 'Должно быть максимум 30 символов'],
+    maxlength: [12, 'Должно быть максимум 30 символов'],
     required: true,
   },
   email: {
